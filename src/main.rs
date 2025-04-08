@@ -2,7 +2,6 @@ use dioxus::prelude::*;
 
 const FAVICON: Asset = asset!("/assets/favicon.ico");
 const MAIN_CSS: Asset = asset!("/assets/main.css");
-const HEADER_SVG: Asset = asset!("/assets/header.svg");
 
 fn main() {
     dioxus::launch(App);
@@ -27,7 +26,7 @@ fn Echo() -> Element {
     rsx! {
         div {
             id: "echo",
-            h4 { "ServerFn Echo" }
+            h4 { "Echo Server" }
             input {
                 placeholder: "Type here to echo...",
                 oninput:  move |event| async move {
